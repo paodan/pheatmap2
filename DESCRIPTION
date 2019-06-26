@@ -1,0 +1,10 @@
+Package: pheatmap2
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Description: This package does what pheatmap package does, but add some other features when plotting, such as reordering (or optimizing the order of) the leaves for the column tree and row tree. To use the original functions in pheatmap package, please install it by install.packages("pheatmap"). For more details about pheatmap, please go to https://cran.r-project.org/web/packages/pheatmap/index.html.
+Depends: R (>= 3.4.0)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
