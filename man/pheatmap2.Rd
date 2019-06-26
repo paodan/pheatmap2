@@ -8,8 +8,8 @@ pheatmap2(mat, color = colorRampPalette(rev(brewer.pal(n = 7, name =
   "RdYlBu")))(100), kmeans_k = NA, breaks = NA,
   border_color = "grey60", cellwidth = NA, cellheight = NA,
   scale = "none", cluster_rows = TRUE, cluster_cols = TRUE,
-  clustering_rows_optimalOrder = FALSE,
-  clustering_cols_optimalOrder = FALSE,
+  clustering_rows_optimalOrder = TRUE,
+  clustering_cols_optimalOrder = TRUE,
   clustering_distance_rows = "euclidean",
   clustering_distance_cols = "euclidean",
   clustering_method = "complete", clustering_callback = identity2,
@@ -60,6 +60,10 @@ either the row direction or the column direction, or none. Corresponding values 
 \item{cluster_rows}{boolean values determining if rows should be clustered or \code{hclust} object,}
 
 \item{cluster_cols}{boolean values determining if columns should be clustered or \code{hclust} object.}
+
+\item{clustering_rows_optimalOrder}{boolean values determining if orders of rows should be optimal.}
+
+\item{clustering_cols_optimalOrder}{boolean values determining if orders of columns should be optimal.}
 
 \item{clustering_distance_rows}{distance measure used in clustering rows. Possible
 values are \code{"correlation"} for Pearson correlation and all the distances

@@ -735,6 +735,9 @@ optimizeLeavesOrder = function(distance, hcluster){
 #' \code{"row"}, \code{"column"} and \code{"none"}
 #' @param cluster_rows boolean values determining if rows should be clustered or \code{hclust} object,
 #' @param cluster_cols boolean values determining if columns should be clustered or \code{hclust} object.
+#' @param clustering_rows_optimalOrder boolean values determining if orders of rows should be optimal.
+#' @param clustering_cols_optimalOrder boolean values determining if orders of columns should be optimal.
+#'
 #' @param clustering_distance_rows distance measure used in clustering rows. Possible
 #' values are \code{"correlation"} for Pearson correlation and all the distances
 #' supported by \code{\link{dist}}, such as \code{"euclidean"}, etc. If the value is none
@@ -921,8 +924,8 @@ pheatmap2 = function(mat,
                     cellwidth = NA, cellheight = NA, scale = "none",
                     cluster_rows = TRUE, cluster_cols = TRUE,
 
-                    clustering_rows_optimalOrder = FALSE, # new feature
-                    clustering_cols_optimalOrder = FALSE, # new feature
+                    clustering_rows_optimalOrder = TRUE, # new feature
+                    clustering_cols_optimalOrder = TRUE, # new feature
 
                     clustering_distance_rows = "euclidean",
                     clustering_distance_cols = "euclidean",
