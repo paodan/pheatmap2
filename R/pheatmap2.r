@@ -486,6 +486,12 @@ heatmap_motor = function(matrix, border_color, cellwidth, cellheight, tree_col,
     if(!is.na2(annotation_col)){
         # Draw tracks
         converted_annotation = convert_annotations(annotation_col, annotation_colors)
+
+        # The color of NA in annotation # modified by Tao
+        if (!is.na(annotation_colors_NA)){
+          converted_annotation[is.na(converted_annotation)] = annotation_colors_NA # "#808080"
+        }
+
         elem = draw_annotations(converted_annotation, border_color, gaps_col, fontsize, horizontal = T)
         res = gtable_add_grob(res, elem, t = 3, l = 3, clip = "off", name = "col_annotation")
 
