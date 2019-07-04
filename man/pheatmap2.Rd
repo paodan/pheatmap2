@@ -27,7 +27,8 @@ pheatmap2(mat, color = colorRampPalette(rev(brewer.pal(n = 7, name =
   number_color = "grey30", fontsize_number = 0.8 * fontsize,
   gaps_row = NULL, gaps_col = NULL, labels_row = NULL,
   labels_col = NULL, filename = NA, width = NA, height = NA,
-  silent = FALSE, na_col = "#DDDDDD", ...)
+  silent = FALSE, na_col = "#DDDDDD",
+  annotation_colors_NA = "#808080", ...)
 }
 \arguments{
 \item{mat}{numeric matrix of the values to be plotted.}
@@ -173,6 +174,9 @@ calculated so that the plot would fit there, unless specified otherwise.}
 \item{silent}{do not draw the plot (useful when using the gtable output)}
 
 \item{na_col}{specify the color of the NA cell in the matrix.}
+
+\item{annotation_colors_NA}{specify the color of the NA in the annotation_col and
+annotation_row. The default is grey (#808080).}
 
 \item{\dots}{graphical parameters for the text used in plot. Parameters passed to
 \code{\link{grid.text}}, see \code{\link{gpar}}.}
