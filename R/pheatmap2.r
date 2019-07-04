@@ -648,7 +648,8 @@ generate_annotation_colours = function(annotation, annotation_colors, drop){
                 factor_colors = factor_colors[-ind]
             }
             else{
-                annotation_colors[[names(annotation)[i]]] = brewer_pal("seq", cont_counter)(5)[1:4]
+              # annotation_colors[[names(annotation)[i]]] = brewer_pal("seq", cont_counter)(5)[1:4]
+              annotation_colors[[names(annotation)[i]]] = brewer_pal("seq", cont_counter)(9)[1:8]
                 cont_counter = cont_counter + 1
             }
         }
